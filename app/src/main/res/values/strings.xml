@@ -39,6 +39,11 @@
     <string name="_kamoku">TextView</string>
     <string name="_tantou">TextView</string>
     <string name="_basyo">TextView</string>
+    <string name="basyo">basyo</string>
+    <string name="kamoku">kamoku</string>
+    <string name="tantou">tantou</string>
+    <string name="tanni">tanni</string>
+    <string name="kakutei">kakutei</string>
 
 
 </resources>

@@ -67,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
+
         TextView textview1 = findViewById(R.id.text1);
         textview1.setOnClickListener((View v) -> {
                 startActivity(new Intent(this, SubActivity.class));
@@ -195,6 +199,12 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        //Subからデータを受けとる
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("edit1");
+        textview1.setText(str);
+
+        
 
         findViewById(R.id.toSub1Button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -340,11 +350,8 @@ public class MainActivity extends AppCompatActivity {
                 manager.notify(0, notification); // 0は識別子。何でも良い
             }
         });
-
-
-
-
         }
+
 
 
 }
