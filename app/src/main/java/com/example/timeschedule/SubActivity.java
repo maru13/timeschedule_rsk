@@ -13,7 +13,7 @@ public class SubActivity extends Activity {
     private EditText edittext1;
     private EditText edittext2;
     private EditText edittext3;
-    private String message;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +34,13 @@ public class SubActivity extends Activity {
         Button result =  findViewById(R.id.result_bt);
         result.setOnClickListener((View view3)-> {
             Intent intent= new Intent(SubActivity.this, MainActivity.class);
-            String str = edittext1.getText().toString();
-            intent.putExtra("edit1", str);
+            String kyoka = edittext1.getText().toString();
+            String tanto = edittext2.getText().toString();
+            String basyo = edittext3.getText().toString();
+
+            intent.putExtra("edit1", kyoka);
+            intent.putExtra("edit2", tanto);
+            intent.putExtra("edit3", basyo);
             setResult(RESULT_OK, intent);
             finish();
             /*

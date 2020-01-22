@@ -61,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView fri4;
     private TextView fri5;
 
+
+
+
     private static final int REQUEST_DATA =4;
 
     @Override
@@ -68,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-            TextView textview1 = findViewById(R.id.text1);
+        TextView textview1 = findViewById(R.id.text1);
         TextView textview2 = findViewById(R.id.text2);
         TextView textview3 = findViewById(R.id.text3);
         TextView textview4 = findViewById(R.id.text4);
@@ -103,60 +106,61 @@ public class MainActivity extends AppCompatActivity {
 
         View.OnClickListener listener = v -> {
             Intent intent = new Intent(MainActivity.this,SubActivity.class);
-                if (v.getId() == R.id.text) {
-                    startActivityForResult(intent, 1);
-                } else if (v.getId() == R.id.text2) {
-                    startActivityForResult(intent, 2);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
+            if (v.getId() == R.id.text1) {
+                startActivityForResult(intent, 1);
+            } else if (v.getId() == R.id.text2) {
+                startActivityForResult(intent, 2);
+            } else if (v.getId() == R.id.text3) {
+                startActivityForResult(intent, 3);
+            } else if (v.getId() == R.id.text4) {
+                startActivityForResult(intent, 4);
+            } else if (v.getId() == R.id.text5) {
+                startActivityForResult(intent, 5);
 
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
+            } else if (v.getId() == R.id.text6) {
+                startActivityForResult(intent, 6);
+            } else if (v.getId() == R.id.text7) {
+                startActivityForResult(intent, 7);
+            } else if (v.getId() == R.id.text8) {
+                startActivityForResult(intent, 8);
+            } else if (v.getId() == R.id.text9) {
+                startActivityForResult(intent, 9);
+            } else if (v.getId() == R.id.text10) {
+                startActivityForResult(intent, 10);
 
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
+            } else if (v.getId() == R.id.text11) {
+                startActivityForResult(intent, 11);
+            } else if (v.getId() == R.id.text12) {
+                startActivityForResult(intent, 12);
+            } else if (v.getId() == R.id.text13) {
+                startActivityForResult(intent, 13);
+            } else if (v.getId() == R.id.text14) {
+                startActivityForResult(intent, 14);
+            } else if (v.getId() == R.id.text15) {
+                startActivityForResult(intent, 15);
 
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
+            } else if (v.getId() == R.id.text16) {
+                startActivityForResult(intent, 16);
+            } else if (v.getId() == R.id.text17) {
+                startActivityForResult(intent, 17);
+            } else if (v.getId() == R.id.text18) {
+                startActivityForResult(intent, 18);
+            } else if (v.getId() == R.id.text19) {
+                startActivityForResult(intent, 19);
+            } else if (v.getId() == R.id.text20) {
+                startActivityForResult(intent, 20);
 
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
-                } else if (v.getId() == R.id.text3) {
-                    startActivityForResult(intent, 3);
+            } else if (v.getId() == R.id.text21) {
+                startActivityForResult(intent, 21);
+            } else if (v.getId() == R.id.text22) {
+                startActivityForResult(intent, 22);
+            } else if (v.getId() == R.id.text23) {
+                startActivityForResult(intent, 23);
+            } else if (v.getId() == R.id.text24) {
+                startActivityForResult(intent, 24);
+            } else if (v.getId() == R.id.text25) {
+                startActivityForResult(intent, 25);
+            }
         };
 
 
@@ -345,10 +349,41 @@ public class MainActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         TextView textview1 = findViewById(R.id.text1);
         TextView textview2 = findViewById(R.id.text2);
+        TextView textview3 = findViewById(R.id.text3);
+        TextView textview4 = findViewById(R.id.text4);
+        TextView textview5 = findViewById(R.id.text5);
+        TextView textview6 = findViewById(R.id.text6);
+        TextView textview7 = findViewById(R.id.text7);
+        TextView textview8 = findViewById(R.id.text8);
+        TextView textview9 = findViewById(R.id.text9);
+        TextView textview10 = findViewById(R.id.text10);
+
+        TextView textview11 = findViewById(R.id.text11);
+        TextView textview12= findViewById(R.id.text12);
+        TextView textview13= findViewById(R.id.text13);
+        TextView textview14 = findViewById(R.id.text14);
+        TextView textview15= findViewById(R.id.text15);
+        TextView textview16= findViewById(R.id.text16);
+        TextView textview17= findViewById(R.id.text17);
+        TextView textview18= findViewById(R.id.text18);
+        TextView textview19= findViewById(R.id.text19);
+        TextView textview20= findViewById(R.id.text20);
+
+        TextView textview21 = findViewById(R.id.text21);
+        TextView textview22 = findViewById(R.id.text22);
+        TextView textview23 = findViewById(R.id.text23);
+        TextView textview24 = findViewById(R.id.text24);
+        TextView textview25 = findViewById(R.id.text25);
+
         switch(requestCode) {
             case(1):
                 if(resultCode == RESULT_OK){
-                   textview1.setText(data.getStringExtra("edit1"));
+
+                   textview1.setText(data.getStringExtra("edit1")+ "\n" +
+                           data.getStringExtra("edit2")+ "\n" +
+                           data.getStringExtra("edit3"));
+
+
                 }else if(resultCode == RESULT_CANCELED){
                     //キャンセルボタンを押して戻ってきたときの処理
                 }else{
@@ -357,7 +392,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case(2):
                 if(resultCode == RESULT_OK){
-                    textview2.setText(data.getStringExtra("edit1"));
+                    textview2.setText(data.getStringExtra("edit1")+ "\n" +
+                            data.getStringExtra("edit2")+ "\n" +
+                            data.getStringExtra("edit3"));
+
                 }else if(resultCode == RESULT_CANCELED){
                     //キャンセルボタンを押して戻ってきたときの処理
                 }else{
