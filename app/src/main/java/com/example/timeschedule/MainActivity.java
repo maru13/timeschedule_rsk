@@ -103,26 +103,64 @@ public class MainActivity extends AppCompatActivity {
 
         View.OnClickListener listener = v -> {
             Intent intent = new Intent(MainActivity.this,SubActivity.class);
-            startActivityForResult(intent,REQUEST_DATA);
+                if (v.getId() == R.id.text) {
+                    startActivityForResult(intent, 1);
+                } else if (v.getId() == R.id.text2) {
+                    startActivityForResult(intent, 2);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
 
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
+                } else if (v.getId() == R.id.text3) {
+                    startActivityForResult(intent, 3);
         };
 
 
-/*
 
-
-        switch (v.getId()) {
-            case R.id.text1:
-
-                break;
-            case R.id.text2:
-                textview2.setText(str);
-                break;
-        }
-        //データ送信
-        intent1.putExtra("EXTRA_DATA", str);
-        startActivity(intent1);
-*/
         textview1.setOnClickListener(listener);
         textview2.setOnClickListener(listener);
         textview3.setOnClickListener(listener);
@@ -306,10 +344,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         TextView textview1 = findViewById(R.id.text1);
+        TextView textview2 = findViewById(R.id.text2);
         switch(requestCode) {
-            case(REQUEST_DATA):
+            case(1):
                 if(resultCode == RESULT_OK){
                    textview1.setText(data.getStringExtra("edit1"));
+                }else if(resultCode == RESULT_CANCELED){
+                    //キャンセルボタンを押して戻ってきたときの処理
+                }else{
+                    //その他
+                }
+                break;
+            case(2):
+                if(resultCode == RESULT_OK){
+                    textview2.setText(data.getStringExtra("edit1"));
                 }else if(resultCode == RESULT_CANCELED){
                     //キャンセルボタンを押して戻ってきたときの処理
                 }else{
