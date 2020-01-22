@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -60,151 +61,100 @@ public class MainActivity extends AppCompatActivity {
     private TextView fri4;
     private TextView fri5;
 
-
+    private static final int REQUEST_DATA =4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-
-        TextView textview1 = findViewById(R.id.text1);
-        textview1.setOnClickListener((View v) -> {
-                startActivity(new Intent(this, SubActivity.class));
-
-            });
-
+            TextView textview1 = findViewById(R.id.text1);
         TextView textview2 = findViewById(R.id.text2);
-        textview2.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
-
         TextView textview3 = findViewById(R.id.text3);
-        textview3.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
         TextView textview4 = findViewById(R.id.text4);
-        textview4.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
         TextView textview5 = findViewById(R.id.text5);
-        textview5.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
         TextView textview6 = findViewById(R.id.text6);
-        textview6.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
         TextView textview7 = findViewById(R.id.text7);
-        textview7.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
         TextView textview8 = findViewById(R.id.text8);
-        textview8.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
         TextView textview9 = findViewById(R.id.text9);
-        textview9.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
         TextView textview10 = findViewById(R.id.text10);
-        textview10.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
 
-        });
         TextView textview11 = findViewById(R.id.text11);
-        textview11.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
-        TextView textview12 = findViewById(R.id.text12);
-        textview12.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
-        TextView textview13 = findViewById(R.id.text13);
-        textview13.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
+        TextView textview12= findViewById(R.id.text12);
+        TextView textview13= findViewById(R.id.text13);
         TextView textview14 = findViewById(R.id.text14);
-        textview14.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
+        TextView textview15= findViewById(R.id.text15);
+        TextView textview16= findViewById(R.id.text16);
+        TextView textview17= findViewById(R.id.text17);
+        TextView textview18= findViewById(R.id.text18);
+        TextView textview19= findViewById(R.id.text19);
+        TextView textview20= findViewById(R.id.text20);
 
-        });
-        TextView textview15 = findViewById(R.id.text15);
-        textview15.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
-        TextView textview16 = findViewById(R.id.text16);
-        textview16.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
-        TextView textview17 = findViewById(R.id.text17);
-        textview17.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
-        TextView textview18 = findViewById(R.id.text18);
-        textview18.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
-        TextView textview19 = findViewById(R.id.text16);
-        textview19.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
-        TextView textview20 = findViewById(R.id.text20);
-        textview20.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
         TextView textview21 = findViewById(R.id.text21);
-        textview21.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
         TextView textview22 = findViewById(R.id.text22);
-        textview22.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
         TextView textview23 = findViewById(R.id.text23);
-        textview23.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
         TextView textview24 = findViewById(R.id.text24);
-        textview24.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
-
-        });
         TextView textview25 = findViewById(R.id.text25);
-        textview25.setOnClickListener((View v) -> {
-            startActivity(new Intent(this, SubActivity.class));
 
-        });
 
-        //Subからデータを受けとる
-        Intent intent = getIntent();
-        String str = intent.getStringExtra("edit1");
-        textview1.setText(str);
 
-        
+
+
+
+        View.OnClickListener listener = v -> {
+            Intent intent = new Intent(MainActivity.this,SubActivity.class);
+            startActivityForResult(intent,REQUEST_DATA);
+
+        };
+
+
+/*
+
+
+        switch (v.getId()) {
+            case R.id.text1:
+
+                break;
+            case R.id.text2:
+                textview2.setText(str);
+                break;
+        }
+        //データ送信
+        intent1.putExtra("EXTRA_DATA", str);
+        startActivity(intent1);
+*/
+        textview1.setOnClickListener(listener);
+        textview2.setOnClickListener(listener);
+        textview3.setOnClickListener(listener);
+        textview4.setOnClickListener(listener);
+        textview5.setOnClickListener(listener);
+        textview6.setOnClickListener(listener);
+        textview7.setOnClickListener(listener);
+        textview8.setOnClickListener(listener);
+        textview9.setOnClickListener(listener);
+        textview10.setOnClickListener(listener);
+
+        textview11.setOnClickListener(listener);
+        textview12.setOnClickListener(listener);
+        textview13.setOnClickListener(listener);
+        textview14.setOnClickListener(listener);
+        textview15.setOnClickListener(listener);
+        textview16.setOnClickListener(listener);
+        textview17.setOnClickListener(listener);
+        textview18.setOnClickListener(listener);
+        textview19.setOnClickListener(listener);
+        textview20.setOnClickListener(listener);
+
+        textview21.setOnClickListener(listener);
+        textview22.setOnClickListener(listener);
+        textview23.setOnClickListener(listener);
+        textview24.setOnClickListener(listener);
+        textview25.setOnClickListener(listener);
+
+
+
+
+
 
         findViewById(R.id.toSub1Button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -349,9 +299,26 @@ public class MainActivity extends AppCompatActivity {
                 NotificationManager manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
                 manager.notify(0, notification); // 0は識別子。何でも良い
             }
+
         });
+
         }
-
-
-
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        TextView textview1 = findViewById(R.id.text1);
+        switch(requestCode) {
+            case(REQUEST_DATA):
+                if(resultCode == RESULT_OK){
+                   textview1.setText(data.getStringExtra("edit1"));
+                }else if(resultCode == RESULT_CANCELED){
+                    //キャンセルボタンを押して戻ってきたときの処理
+                }else{
+                    //その他
+                }
+                break;
+            default:
+                break;
+        }
+    }
 }
+
