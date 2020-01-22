@@ -43,15 +43,11 @@ public class SubActivity extends Activity {
             intent.putExtra("edit3", basyo);
             setResult(RESULT_OK, intent);
             finish();
-            /*
-            if(edittext1.getText() != null){
-                String str = edittext1.getText().toString();
-                intent.putExtra("edit1", str);
-                startActivity(intent);
-            }
-             */
-
         });
+
+        Intent intent1 = this.getIntent();
+        String text = intent1.getStringExtra("edit_1");
+        edittext1.setText(text);
 
     }
 }

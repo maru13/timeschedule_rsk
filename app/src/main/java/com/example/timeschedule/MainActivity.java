@@ -375,15 +375,18 @@ public class MainActivity extends AppCompatActivity {
         TextView textview24 = findViewById(R.id.text24);
         TextView textview25 = findViewById(R.id.text25);
 
+        String edit_1 = data.getStringExtra("edit1");
+        String edit_2 = data.getStringExtra("edit2");
+        String edit_3 = data.getStringExtra("edit3");
+
+        String str = data.getStringExtra("edit1")+ "\n" +
+                data.getStringExtra("edit2")+ "\n" +
+                data.getStringExtra("edit3");
         switch(requestCode) {
             case(1):
                 if(resultCode == RESULT_OK){
-
-                   textview1.setText(data.getStringExtra("edit1")+ "\n" +
-                           data.getStringExtra("edit2")+ "\n" +
-                           data.getStringExtra("edit3"));
-
-
+                   textview1.setText(str);
+                   data.putExtra("sendText", edit_1);
                 }else if(resultCode == RESULT_CANCELED){
                     //キャンセルボタンを押して戻ってきたときの処理
                 }else{
@@ -392,10 +395,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case(2):
                 if(resultCode == RESULT_OK){
-                    textview2.setText(data.getStringExtra("edit1")+ "\n" +
-                            data.getStringExtra("edit2")+ "\n" +
-                            data.getStringExtra("edit3"));
-
+                    textview2.setText(str);
                 }else if(resultCode == RESULT_CANCELED){
                     //キャンセルボタンを押して戻ってきたときの処理
                 }else{
