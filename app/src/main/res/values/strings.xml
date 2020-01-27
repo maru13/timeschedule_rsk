@@ -44,6 +44,9 @@
     <string name="tantou">tantou</string>
     <string name="tanni">tanni</string>
     <string name="kakutei">kakutei</string>
+    <string name="returnati">Button</string>
+    <string name="returnAti">確定</string>
+    <string name="test">通知時間を設定してください</string>
 
 
 </resources>
