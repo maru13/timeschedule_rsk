@@ -194,70 +194,6 @@ protected void onCreate(Bundle savedInstanceState) {
 
 
 
-/*
-    // AlarmManagerから通知を受け取るレシーバーを定義する
-    Intent intent2 = new Intent(MainActivity.this,  NotificationActivity.class);
-// レシーバーで判断するため 適当でOK
-    intent2.putExtra("intent_alarm_id_key", 1000);
-
-    PendingIntent sender = PendingIntent.getBroadcast(MainActivity.this,0, intent2,
-            PendingIntent.FLAG_UPDATE_CURRENT);
-
-// 通知させたい時間をCalendarを使って定義する
-    Calendar calSet = Calendar.getInstance();
-    calSet.setTimeInMillis(System.currentTimeMillis());
-    calSet.setTimeZone(TimeZone.getDefault());
-
-// 毎日17:30に通知を表示させる
-    calSet.set(Calendar.HOUR_OF_DAY, 17);
-    calSet.set(Calendar.MINUTE, 30);
-
-
-    AlarmManager alarmManager = (AlarmManager) MainActivity.this.getSystemService(Context.ALARM_SERVICE);
-// AlarmManager.RTC_WAKEUPで端末スリープ時に起動させるようにする
-// 1回だけ通知の場合はalarmManager.set()を使う
-    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calSet.getTimeInMillis(),
-// 一日毎にアラームを呼び出す
-            AlarmManager.INTERVAL_DAY, sender);
-*/
-
-/*
-    // 通知を作成するビルダーの生成
-    NotificationCompat.Builder builder = new NotificationCompat.Builder(
-            MainActivity.this,
-            "MyChannel_Id");
-
-*/
-
-
-
-
-    /*
-    通知のタイトル
-    builder.setContentTitle(title);
-    // 通知の内容
-    builder.setContentText(memo);
-
-    // 通知をタップした際にアクティビティを起動する
-    // --- ここを削除すると通知の表示のみとなる
-    Intent intent = new Intent(MainActivity.this,NotificationActivity.class);
-    intent.putExtra("DATA","通知から起動されました。");
-
-    PendingIntent pen = PendingIntent.getActivity(MainActivity.this,
-            0, // 0は識別子。何でも良い
-            intent,
-            PendingIntent.FLAG_CANCEL_CURRENT);  // オブジェクトを再生成
-    builder.setContentIntent(pen);
-    builder.setAutoCancel(true);
-    // --- ここを削除すると通知の表示のみとなる
-
-    // 通知の作成
-    Notification notification = builder.build();
-
-    // 通知サービスで通知を実行する
-    NotificationManager manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-    manager.notify(0, notification); // 0は識別子。何でも良い
-*/
 
 
 
@@ -358,11 +294,10 @@ protected void onCreate(Bundle savedInstanceState) {
                 memo = text21 + " | " + text22 + " | " + text23 + " | " + text24 + " | " + text25;
                 break;
 
-        }
-       // Intent intent2 = new Intent(MainActivity.this, NotificationActivity.class);
+             }
+      //      Intent intent2 = new Intent(MainActivity.this, NotificationActivity.class);
         intent1.putExtra("tiName",title);
         intent1.putExtra("meName", memo);
-      //  sendBroadcast(intent2);
 
         startActivity(intent1);
     });
@@ -405,21 +340,290 @@ public void onActivityResult(int requestCode, int resultCode, Intent data){
     String str = data.getStringExtra("edit1")+ "\n" +
             data.getStringExtra("edit2")+ "\n" +
             data.getStringExtra("edit3");
-    switch(requestCode) {
-        case(1):
-            if(resultCode == RESULT_OK){
-                textview1.setText(str);
-                data.putExtra("sendText", edit_1);
-            }else if(resultCode == RESULT_CANCELED){
-                //キャンセルボタンを押して戻ってきたときの処理
-            }else{
-                //その他
-            }
-            break;
-        case(2):
-            if(resultCode == RESULT_OK){
-                textview2.setText(str);
-            }else if(resultCode == RESULT_CANCELED){
+            switch(requestCode) {
+
+
+                case(1):
+                    if(resultCode == RESULT_OK){
+
+                        textview1.setText(str) ;
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+
+                case(2):
+                    if(resultCode == RESULT_OK){
+                        textview2.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+
+                case(3):
+                    if(resultCode == RESULT_OK){
+                        textview3.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+
+                case(4):
+                    if(resultCode == RESULT_OK){
+                        textview4.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+
+                case(5):
+                    if(resultCode == RESULT_OK){
+                        textview5.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+
+
+                case(6):
+                    if(resultCode == RESULT_OK){
+                        textview6.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+
+                case(7):
+                    if(resultCode == RESULT_OK){
+                        textview7.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+
+                case(8):
+                    if(resultCode == RESULT_OK){
+                        textview8.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(9):
+                    if(resultCode == RESULT_OK){
+                        textview9.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(10):
+                    if(resultCode == RESULT_OK){
+                        textview10.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(11):
+                    if(resultCode == RESULT_OK){
+                        textview11.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(12):
+                    if(resultCode == RESULT_OK){
+                        textview12.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(13):
+                    if(resultCode == RESULT_OK){
+                        textview13.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(14):
+                    if(resultCode == RESULT_OK){
+                        textview14.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(15):
+                    if(resultCode == RESULT_OK){
+                        textview15.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(16):
+                    if(resultCode == RESULT_OK){
+                        textview16.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+
+                case(17):
+                    if(resultCode == RESULT_OK){
+                        textview17.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(18):
+                    if(resultCode == RESULT_OK){
+                        textview18.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+
+                case(19):
+                    if(resultCode == RESULT_OK){
+                        textview19.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+
+
+                case(20):
+                    if(resultCode == RESULT_OK){
+                        textview20.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(21):
+                    if(resultCode == RESULT_OK){
+                        textview21.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(22):
+                    if(resultCode == RESULT_OK){
+                        textview22.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(23):
+                    if(resultCode == RESULT_OK){
+                        textview23.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(24):
+                    if(resultCode == RESULT_OK){
+                        textview24.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
+                        //キャンセルボタンを押して戻ってきたときの処理
+                    }else{
+                        //その他
+                    }
+                    break;
+
+                case(25):
+                    if(resultCode == RESULT_OK){
+                        textview25.setText(str);
+
+                    }else if(resultCode == RESULT_CANCELED){
                 //キャンセルボタンを押して戻ってきたときの処理
             }else{
                 //その他

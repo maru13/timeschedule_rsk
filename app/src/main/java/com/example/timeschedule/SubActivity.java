@@ -22,7 +22,7 @@ public class SubActivity extends Activity {
 
 
         //文字列取得（科目、担当、場所）
-        edittext1 = (EditText) findViewById(R.id.editText);
+        edittext1 = (EditText) findViewById(R.id.editText1);
         edittext2 = (EditText) findViewById(R.id.editText2);
         edittext3 = (EditText) findViewById(R.id.editText3);
 

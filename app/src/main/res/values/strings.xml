@@ -28,22 +28,29 @@
     <string name="_19textview">TextView</string>
     <string name="_20textview">TextView</string>
 
-
     <string name="button">Button</string>
     <string name="title_home" />
     <string name="title_dashboard" />
     <string name="title_notifications" />
-    <string name="returnbutton">returnButton</string>
+    <string name="returnbutton">戻る</string>
     <string name="todo">TODO</string>
     <string name="img_description1">image1</string>
     <string name="_kamoku">TextView</string>
     <string name="_tantou">TextView</string>
     <string name="_basyo">TextView</string>
-    <string name="basyo">basyo</string>
-    <string name="kamoku">kamoku</string>
-    <string name="tantou">tantou</string>
-    <string name="tanni">tanni</string>
-    <string name="kakutei">kakutei</string>
+    <string name="tani">TextView</string>
+    <string name="textview">TextView</string>
+    <string name="tantou">担当</string>
+    <string name="basyo">場所</string>
+    <string name="kamoku">科目</string>
+    <string name="tanni">単位</string>
+    <string name="iro">色</string>
+    <string name="tantou1">Name</string>
+    <string name="basyo1">Name</string>
+    <string name="kamoku1">Name</string>
+    <string name="tanni1">Number</string>
+    <string name="kakutei">決定</string>
+
     <string name="returnati">Button</string>
     <string name="returnAti">確定</string>
     <string name="test">通知時間を設定してください</string>
